@@ -24,7 +24,7 @@ export default function SequenceMemorization(props) {
   async function pushData() {
     let newClass = classes[props.classViewing];
     if (dataHolder !== 0) {
-      newClass.studentsList[props.studentViewing].stats.wordSearch.push(
+      newClass.studentsList[props.studentViewing].stats.sequenceMemorization.push(
         dataHolder
       );
     }

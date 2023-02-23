@@ -18,7 +18,7 @@ export default function LetterRescramble(props) {
 
   async function pushData() {
     let newClass = classes[props.classViewing]
-    newClass.studentsList[props.studentViewing].stats.wordSearch.push(dataHolder)
+    newClass.studentsList[props.studentViewing].stats.letterRescramble.push(dataHolder)
     await editClass(classes[props.classViewing]._id, newClass)
     refresh()
   }
