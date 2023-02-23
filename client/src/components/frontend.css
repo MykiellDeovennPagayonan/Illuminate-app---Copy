@@ -1,0 +1,50 @@
+.background-outer{
+  background-color: #E7AC76;
+  height: 100vh;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  align-items: center;
+}
+
+.background-inner{
+  background-color: #E4D8C6;
+  height: 720px;
+  width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  border-radius: 25px;
+  border: 3px solid black;
+  display: flex;
+}
+
+.left-tab{
+  height: 720px;
+  width: 250px;
+  background-color: #E7BF83;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+.top-left-tab{
+  height: 350px;
+  width: 100%;
+  align-content: center;
+}
+
+.bottom-left-tab{
+  height: 370px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main-content{
+  height: 100%;
+  width: 100%;
+  background-color: none;
+}

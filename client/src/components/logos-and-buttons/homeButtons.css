@@ -1,0 +1,9 @@
+.button-profile{
+  height: 60px;
+  width: 150px;
+  border: 2px solid black;
+  margin-top: 20px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+}

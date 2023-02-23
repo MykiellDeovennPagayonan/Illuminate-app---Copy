@@ -1,0 +1,132 @@
+.conatiner-stats{
+  height: 685px;
+  width: 985px;
+  background-color: #E7BF83;
+  border-radius: 15px;
+  border: 3px solid black;
+  display: flex;
+  flex-direction: column;
+}
+
+.container-top{
+  height: 50px;
+  width: 985px;
+  align-items: center;
+}
+
+.container-bottom{
+  height: 635px;
+  width: 985px;
+  display: flex;
+}
+
+.back{
+  position: absolute;
+  width: 80px;
+  height: 40px;
+  background-color: bisque;
+  margin-top: 5px;
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.stat-title{
+  width: 350px;
+  height: 50px;
+  background-color: bisque;
+  display: block;
+  margin: auto;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.details-left{
+  height: 635px;
+  width: 750px;
+}
+
+.details-right{
+  height: 635px;
+  width: 235px;
+}
+
+.switches{
+  width: 400px;
+  height: 90px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.attempts, .sets{
+  width: 400px;
+  height: 40px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+}
+
+.name{
+  width: 240px;
+  height: auto;
+  text-align: center;
+}
+
+.change{
+  width: 80px;
+  height: 30px;
+  font-size: 15px;
+}
+
+.stats-content{
+  width: 750px;
+  height: 545px;
+  border-radius: 10px;
+  border: 4px solid black;
+  background-color: #E4D8C6;
+  display: flex;
+  flex-direction: column;
+}
+
+.grid-boxes{
+  width: 550px;
+  height: 440px;
+  left: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-rows: 55px 55px 55px 55px 55px 55px 55px 55px;
+  grid-template-columns: 55px 55px 55px 55px 55px 55px 55px 55px 55px 55px;
+}
+
+.boxes-words{
+  width: 51px;
+  height: 51px;
+  margin: auto;
+  font-size: 20px;
+}
+
+.boxes-words-enlarged{
+  width: 53px;
+  height: 53px;
+  margin: auto;
+  background-color: #E7BF83;
+  font-size: 20px;
+}
+
+.words-lined{
+  width: 730px;
+  height: 100px;
+  display: flex;
+}
+
+.words-chosen{
+  width: 150px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #E7BF83;
+  margin: auto;
+  border: 3px solid black;
+  font-weight: 600;
+  font-size: 17px;
+}

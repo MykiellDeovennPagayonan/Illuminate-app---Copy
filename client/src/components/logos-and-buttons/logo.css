@@ -1,0 +1,25 @@
+.logo-background{
+  background-color: #E4D8C6;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  margin-top: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  height: 130px;
+  width: 130px;
+  margin: auto;
+  background-size: 130px;
+  background-image: url('../resources/img/Logo.png');
+}
+
+.project-name{
+  font-size: 38px;
+  font-family: "Helvetica Neue";
+  text-align: center;
+}

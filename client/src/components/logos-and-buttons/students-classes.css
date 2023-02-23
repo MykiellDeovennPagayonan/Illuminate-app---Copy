@@ -1,0 +1,47 @@
+.student-classes-holder{
+  width: 213px;
+  height: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.class-title-games{
+  margin-top: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  width: auto;
+  color: black;
+  text-align: center;
+  margin: 10px;
+}
+
+.class-selected{
+  font-size: 18px;
+  height: 70px;
+  width: 150px;
+  border-radius: 20px;
+}
+
+.button-container{
+  width: 150px;
+  height: 50px;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.save, .delete, .next, .prev{
+  width: 80px;
+  height: 30px;
+  font-size: 18px;
+  font-weight: bold;
+  margin: auto
+}
+
+.student-name{
+  font-size: 18px;
+  height: 50px;
+  width: 150px;
+  border-radius: 10px;
+}

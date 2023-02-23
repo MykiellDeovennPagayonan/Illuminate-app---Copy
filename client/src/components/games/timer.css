@@ -1,0 +1,21 @@
+.timer{
+  width: 1120px;
+  height: 50px;
+  position: absolute;
+  top: 100px;
+  left: 265px;
+  background-color: white;
+  border: 4px solid black;
+  display: flex;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+.timer-bar{
+  height: 44px;
+  position: relative;
+  background-color: #78BC66;
+  margin: 0px;
+  padding: 0px;
+}

@@ -1,0 +1,35 @@
+.main-home-intro{
+  height: 620px;
+  width: 900px;
+  background-image: url('../resources/img/main-home-intro.png');
+  background-size: cover;
+  margin-top: 50px;
+  display: inline-block;
+}
+
+.welcome-class{
+  font-size: 60px;
+  text-align: center;
+  color: #E4D8C6;
+  width: 98%;
+  padding: 20px;
+}
+
+.button-game-series{
+  position: relative;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  left: 70px;
+}
+
+.button-game{
+  height: 80px;
+  width: 300px;
+  border: 2px solid black;
+  margin-top: 30px;
+  border-radius: 25px;
+  font-size: 20px;
+}
