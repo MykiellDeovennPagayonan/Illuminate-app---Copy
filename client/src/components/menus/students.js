@@ -5,14 +5,13 @@ import editClass from "../functions/editClass";
 import getClasses from "../functions/getClasses";
 
 export default function Students(props) {
-  const [classes, setClasses] = useState([]);
   const [students, setStudents] = useState([]);
   const [editName, setEditName] = useState();
   const [editEnable, setEditEnable] = useState(false);
   const [numClasses, setNumClasses] = useState(0);
 
   async function refresh() {
-    const classesIni = await getClasses();
+    const classesIni = props.classes;
     let studentsInitial = [];
     for (
       let i = 0;
@@ -23,7 +22,6 @@ export default function Students(props) {
     }
     setNumClasses(classesIni.length);
     setStudents(studentsInitial);
-    setClasses(classesIni);
   }
 
   useEffect(() => {
@@ -31,8 +29,8 @@ export default function Students(props) {
   }, [props.studentViewing, props.classViewing]);
 
   async function addStudent() {
-    let newClass = classes[props.classViewing];
-    let studentsListArray = [...classes[props.classViewing].studentsList];
+    let newClass = props.classes[props.classViewing];
+    let studentsListArray = [...props.classes[props.classViewing].studentsList];
     studentsListArray.push({
       name: "",
       stats: {
@@ -47,17 +45,17 @@ export default function Students(props) {
       },
     });
     newClass.studentsList = studentsListArray;
-    editClass(classes[props.classViewing]._id, newClass);
+    editClass(props.classes[props.classViewing]._id, newClass);
     refresh();
   }
 
   async function deleteStudent() {
-    let newClass = classes[props.classViewing];
-    let studentsListArray = [...classes[props.classViewing].studentsList];
+    let newClass = props.classes[props.classViewing];
+    let studentsListArray = [...props.classes[props.classViewing].studentsList];
     if (studentsListArray.length > 1) {
       studentsListArray.splice(props.studentViewing, 1);
       newClass.studentsList = studentsListArray;
-      editClass(classes[props.classViewing]._id, newClass);
+      editClass(props.classes[props.classViewing]._id, newClass);
 
       if (props.studentViewing === studentsListArray.length - 0) {
         props.setStudentViewing((prev) => prev - 1);
@@ -100,7 +98,7 @@ export default function Students(props) {
       </div>
       <div className="right-tab">
         <div className="class-title"> Class Selected </div>
-        {classes.map((classItem, index) => {
+        {props.classes.map((classItem, index) => {
           if (props.classViewing === index) {
             return (
               <>

@@ -6,8 +6,8 @@ import createClass from "../functions/createClass";
 import editClass from "../functions/editClass";
 import getClasses from "../functions/getClasses";
 
-export default function Classes() {
-  const [classes, setClasses] = useState([]);
+export default function Classes(props) {
+  const [classes, setClasses] = useState(props.classes);
 
   const [editEnable, setEditEnable] = useState(false);
   const [classBeingEdited, setClassBeingEdited] = useState(null);
@@ -15,7 +15,6 @@ export default function Classes() {
   const [editTitle, setEditTitle] = useState();
 
   async function refresh() {
-    console.log("refresh");
     const response = await getClasses();
     setClasses(response);
   }

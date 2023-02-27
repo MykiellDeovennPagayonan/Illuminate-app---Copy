@@ -1,16 +1,12 @@
 import "./students-classes.css";
 import { useState, useEffect } from "react";
 
-import getClasses from "../functions/getClasses";
-
 export default function StudentsClasses(props) {
-  const [classes, setClasses] = useState([]);
-  const [students, setStudents] = useState([]);
   const [numClasses, setNumClasses] = useState(0);
   const [numStudents, setNumStudents] = useState(0);
 
-  async function refresh() {
-    const classesIni = await getClasses();
+  function refresh() {
+    const classesIni = props.classes;
     let studentsInitial = [];
     for (
       let i = 0;
@@ -21,8 +17,6 @@ export default function StudentsClasses(props) {
     }
     setNumClasses(classesIni.length);
     setNumStudents(studentsInitial.length);
-    setStudents(studentsInitial);
-    setClasses(classesIni);
   }
 
   useEffect(() => {
@@ -32,7 +26,7 @@ export default function StudentsClasses(props) {
   return (
     <div className="student-classes-holder">
       <div className="class-title-games"> Class Selected </div>
-      {classes.map((classItem, index) => {
+      {props.classes.map((classItem, index) => {
         if (props.classViewing === index) {
           return (
             <>

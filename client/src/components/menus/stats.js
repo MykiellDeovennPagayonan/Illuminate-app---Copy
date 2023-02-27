@@ -13,20 +13,18 @@ import WordSearchDetailed from './stats-detailed/wordSearchDetailed';
 import getClasses from "../functions/getClasses";
 
 export default function Stats(props) {
-  const [ classes, setClasses ] = useState([])
   const [ statViewing, setStatViewing ] = useState(0)
   const [ numClasses, setNumClasses ] = useState(0)
   const [ numStudents, setNumStudents ] = useState(0)
 
-  async function refresh () {
-    const classesIni = await getClasses();
+  function refresh () {
+    const classesIni = props.classes;
     let studentsInitial = []
     for (let i = 0; i < classesIni[props.classViewing].studentsList.length; i++) {
       studentsInitial.push(classesIni[props.classViewing].studentsList[i])
     }
     setNumClasses(classesIni.length)
     setNumStudents(studentsInitial.length)
-    setClasses(classesIni)
   }
 
   useEffect(() => {
@@ -37,7 +35,7 @@ export default function Stats(props) {
     <>
       <div className="right-tab-stats">
       <div className="class-title"> Class Selected </div>
-        {classes.map((classItem, index) => {
+        {props.classes.map((classItem, index) => {
           if (props.classViewing === index){
             return (
             <>

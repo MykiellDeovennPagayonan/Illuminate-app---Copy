@@ -10,7 +10,7 @@ export default function Timer(props) {
         props.setTimerDone(true)
         setBarProgress(1000)
       } else {
-        setBarProgress(prevProgress => prevProgress - 20)
+        setBarProgress(prevProgress => prevProgress - 50)
       }
     }, 1000)
     return () => clearInterval(timer)

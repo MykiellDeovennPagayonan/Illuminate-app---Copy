@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Logo from "./logos-and-buttons/logo";
 import Home from "./menus/home";
 import Classes from "./menus/classes";
@@ -18,14 +18,28 @@ import SyllableRecognition from "./games/phonetic-recognition/syllableRecognitio
 import WordRecognition from "./games/phonetic-recognition/wordRecognition";
 import Timer from "./games/timer";
 
+import getClasses from "./functions/getClasses";
+import editClass from "./functions/editClass";
+
 import "./frontend.css";
 
 export default function Frontend() {
+  const [classes, setClasses] = useState([]);
   const [pageNum, setPageNum] = useState(1);
   const [gameNum, setGameNum] = useState(1);
   const [studentViewing, setStudentViewing] = useState(0);
   const [classViewing, setClassViewing] = useState(0);
   const [timerDone, setTimerDone] = useState(false);
+  const [refresher, SetRefresher] = useState(1)
+
+  async function refresh() {
+    const response = await getClasses();
+    setClasses(response);
+  }
+
+  useEffect(() => {
+    refresh();
+  }, [refresher]);
 
   const nextStudentView = (studentViewLength) => {
     if (studentViewing < studentViewLength - 1) {
@@ -74,6 +88,7 @@ export default function Frontend() {
                 classViewing={classViewing}
                 setClassViewing={setClassViewing}
                 setStudentViewing={setStudentViewing}
+                classes={classes}
               />
             ) : (
               <Logo />
@@ -102,7 +117,7 @@ export default function Frontend() {
               pageNum={pageNum}
             />
           ) : null}
-          {pageNum === 2 ? <Classes /> : null}
+          {pageNum === 2 ? <Classes classes={classes}/> : null}
           {pageNum === 3 ? (
             <Students
               nextClassView={nextClassView}
@@ -113,6 +128,7 @@ export default function Frontend() {
               classViewing={classViewing}
               setClassViewing={setClassViewing}
               setStudentViewing={setStudentViewing}
+              classes={classes}
             />
           ) : null}
           {pageNum === 4 ? (
@@ -125,6 +141,7 @@ export default function Frontend() {
               classViewing={classViewing}
               setClassViewing={setClassViewing}
               setStudentViewing={setStudentViewing}
+              classes={classes}
             />
           ) : null}
           {pageNum > 4 ? (
