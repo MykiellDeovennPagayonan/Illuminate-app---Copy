@@ -7,7 +7,7 @@ const PORT = 7000
 mongoose.Promise = global.Promise;
 
 mongoose.connect(
-  "mongodb://illuminate-app:N1oZb3jAXOpHGLHIvroz5Kpgv6M4ekiSxXXajeRM9nDDeSM1fuzquuIkJARahsycKIOYBoMW836MACDbXQIg5A%3D%3D@illuminate-app.mongo.cosmos.azure.com:10255/?ssl=true&retrywrites=false&maxIdleTimeMS=120000&appName=@illuminate-app@"
+  "mongodb+srv://Sibato:mykiell5153@cluster0.6f5p0xq.mongodb.net/illuminate?retryWrites=true&w=majority"
 );
 
 const cors = require("cors");
