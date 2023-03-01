@@ -13,6 +13,9 @@ const newClass = {
       letterRecognition: [0, 0],
       syllableRecognition: [0, 0],
       wordRecognition: [0, 0]
+    },
+    dyslexiaTest: {
+      handwritingTest: []
     }
   }],
   edit: true

@@ -2,7 +2,6 @@ import "./students.css";
 import { useState, useEffect } from "react";
 
 import editClass from "../functions/editClass";
-import getClasses from "../functions/getClasses";
 
 export default function Students(props) {
   const [students, setStudents] = useState([]);
@@ -43,6 +42,9 @@ export default function Students(props) {
         syllableRecognition: [0, 0],
         wordRecognition: [0, 0]
       },
+      dyslexiaTest: {
+        handwritingTest: []
+      }
     });
     newClass.studentsList = studentsListArray;
     editClass(props.classes[props.classViewing]._id, newClass);
