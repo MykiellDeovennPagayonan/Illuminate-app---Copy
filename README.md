@@ -1,0 +1,1 @@
+[![Board Status](https://dev.azure.com/rafaeliiiprudente-21/9c096306-bb87-4a71-9f05-ae86a0f1f9c7/6c9887ff-5e6c-4991-80b8-9a5636714053/_apis/work/boardbadge/06d6f57e-b5b3-4abc-848e-eae97dab1c86)](https://dev.azure.com/rafaeliiiprudente-21/9c096306-bb87-4a71-9f05-ae86a0f1f9c7/_boards/board/t/6c9887ff-5e6c-4991-80b8-9a5636714053/Microsoft.RequirementCategory)
